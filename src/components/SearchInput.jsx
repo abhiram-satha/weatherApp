@@ -3,6 +3,9 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 export default function SearchInput({submitPostalCode}) {
+
+
+
   return (
     <Box
       component="form"
@@ -11,6 +14,7 @@ export default function SearchInput({submitPostalCode}) {
       }}
       noValidate
       autoComplete="on"
+      onSubmit={(event)=>submitPostalCode(event)}
     >
       <div>
 
@@ -19,7 +23,7 @@ export default function SearchInput({submitPostalCode}) {
           label="Postal Code"
           type="search"
           variant="standard"
-          onSubmit={(event)=>submitPostalCode(event)}
+          
         />
 
       </div>
