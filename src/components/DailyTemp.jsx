@@ -4,7 +4,7 @@ export default function DailyTemp({city, temperature, weatherArray}) {
 
   const {temp, feels_like, temp_max, temp_min} = temperature;
   const {main, description} = weatherArray
-  console.log(weatherArray)
+
 
 
   // console.log(temperature)
