@@ -4,6 +4,7 @@ import DailyTemp from "./components/DailyTemp";
 import SearchInput from "./components/SearchInput";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Weekly from "./components/Weekly";
 
 function App() {
   const [temperature, setTemperature] = useState([]);
@@ -50,6 +51,7 @@ function App() {
         city={city}
         weatherArray={weatherArray}
       />
+      <Weekly weeklyForecastArray={weeklyForecastArray} />
     </div>
   );
 }
