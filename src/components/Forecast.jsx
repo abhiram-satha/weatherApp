@@ -1,3 +1,5 @@
+import Demo from "./Demo";
+
 export default function Forecast({ forecastObject, kelvinToCelsius }) {
   const { main, weather, dt_txt } = forecastObject;
 
@@ -11,6 +13,7 @@ export default function Forecast({ forecastObject, kelvinToCelsius }) {
           <br />
           {kelvinToCelsius(main.temp)}°C
         </h6>
+        <Demo />
       </div>
     </div>
   );
