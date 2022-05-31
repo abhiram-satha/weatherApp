@@ -1,6 +1,6 @@
 import "./DailyTemp.css";
 
-export default function DailyTemp({city, temperature, weatherArray}) {
+export default function DailyTemp({city, temperature, weatherArray, kelvinToCelsius}) {
 
   const {temp, feels_like, temp_max, temp_min} = temperature;
   const {main, description} = weatherArray
@@ -8,9 +8,7 @@ export default function DailyTemp({city, temperature, weatherArray}) {
 
 
   // console.log(temperature)
-  const kelvinToCelsius = (kelvin) => {
-    return (kelvin - 273.15).toFixed(2);
-  }
+
   return(
     <>
 

@@ -37,10 +37,14 @@ function App() {
         `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_FORECAST}`
       );
 
-      setWeeklyForecastArray(weeklyForecast.data.list)
+      setWeeklyForecastArray(weeklyForecast.data.list);
     } catch (error) {
       console.log("Invalid postal Code");
     }
+  };
+
+  const kelvinToCelsius = (kelvin) => {
+    return (kelvin - 273.15).toFixed(2);
   };
 
   return (
@@ -50,8 +54,12 @@ function App() {
         temperature={temperature}
         city={city}
         weatherArray={weatherArray}
+        kelvinToCelsius={kelvinToCelsius}
       />
-      <Weekly weeklyForecastArray={weeklyForecastArray} />
+      <Weekly
+        weeklyForecastArray={weeklyForecastArray}
+        kelvinToCelsius={kelvinToCelsius}
+      />
     </div>
   );
 }

@@ -4,3 +4,11 @@ div.weekly-grid {
   justify-content: center;
   column-gap: 5em
 }
+
+div.forecast-flex {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+  border: 1px gray solid;
+  padding: 10% 30%
+}

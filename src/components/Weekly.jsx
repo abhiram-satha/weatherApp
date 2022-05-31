@@ -2,7 +2,7 @@ import "./Weekly.css";
 
 import Forecast from "./Forecast";
 
-export default function Weekly({weeklyForecastArray}) {
+export default function Weekly({weeklyForecastArray, kelvinToCelsius}) {
 
 
 const forecastSplit = () => {
@@ -10,7 +10,8 @@ const forecastSplit = () => {
   for (let i = 0; i < weeklyForecastArray.length; i += 8) {
     console.log(weeklyForecastArray[i])
     newForecastArray.push(<Forecast 
-      forecastObject={weeklyForecastArray[i]} 
+      forecastObject={weeklyForecastArray[i]}
+      kelvinToCelsius={kelvinToCelsius} 
     />)
   }
   return newForecastArray
