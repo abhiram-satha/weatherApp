@@ -16,9 +16,9 @@ function App() {
   useEffect(() => 
 
   
-    console.log(useGeolocated)
+    // console.log(useGeolocated)
    
-, []);
+ []);
 
   const submitPostalCode = async (event) => {
     event.preventDefault();

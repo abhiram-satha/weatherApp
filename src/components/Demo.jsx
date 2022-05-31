@@ -7,7 +7,7 @@ const Demo = () => {
             positionOptions: {
                 enableHighAccuracy: false,
             },
-            userDecisionTimeout: 5000,
+            userDecisionTimeout: 1000,
         });
 
     return !isGeolocationAvailable ? (
@@ -15,7 +15,8 @@ const Demo = () => {
     ) : !isGeolocationEnabled ? (
         <div>Geolocation is not enabled</div>
     ) : coords ? (
-        console.log(coords)
+      // const {longitude, latitude} = coords;
+        console.log(coords.longitude)
     ) : (
         <div>Getting the location data&hellip; </div>
     );
