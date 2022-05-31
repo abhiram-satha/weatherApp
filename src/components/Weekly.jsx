@@ -1,3 +1,5 @@
+import "./Weekly.css";
+
 import Forecast from "./Forecast";
 
 export default function Weekly({weeklyForecastArray}) {
@@ -19,7 +21,10 @@ forecastSplit();
     <>
     
     <h2>5 Day Forecast</h2>
+    <div className="weekly-grid">
+
       {forecastSplit()}
+    </div>
     </>
   )
 }

@@ -1,0 +1,6 @@
+div.weekly-grid {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  column-gap: 5em
+}
