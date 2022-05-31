@@ -4,14 +4,14 @@ import Forecast from "./Forecast";
 
 export default function Weekly({weeklyForecastArray, kelvinToCelsius}) {
 
-
 const forecastSplit = () => {
   let newForecastArray = []
   for (let i = 0; i < weeklyForecastArray.length; i += 8) {
-    console.log(weeklyForecastArray[i])
+    // console.log(weeklyForecastArray[i])
     newForecastArray.push(<Forecast 
       forecastObject={weeklyForecastArray[i]}
       kelvinToCelsius={kelvinToCelsius} 
+      key={weeklyForecastArray[i].dt}
     />)
   }
   return newForecastArray
