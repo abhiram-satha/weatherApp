@@ -13,12 +13,18 @@ function App() {
   const [weatherArray, setWeatherArray] = useState([]);
   const [weeklyForecastArray, setWeeklyForecastArray] = useState([]);
 
-  useEffect(() => 
 
-  
-    // console.log(useGeolocated)
+
+
+useEffect(() => {
+
+
+// console.log(useGeolocated)
+  }
+
+    
    
- []);
+ , []);
 
   const submitPostalCode = async (event) => {
     event.preventDefault();
