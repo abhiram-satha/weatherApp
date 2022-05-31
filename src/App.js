@@ -3,6 +3,7 @@ import "./App.css";
 import DailyTemp from "./components/DailyTemp";
 import SearchInput from "./components/SearchInput";
 import { useEffect, useState } from "react";
+import { useGeolocated } from "react-geolocated";
 import axios from "axios";
 import Weekly from "./components/Weekly";
 
@@ -12,7 +13,25 @@ function App() {
   const [weatherArray, setWeatherArray] = useState([]);
   const [weeklyForecastArray, setWeeklyForecastArray] = useState([]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {const Demo = () => {
+    const { coords, isGeolocationAvailable, isGeolocationEnabled } =
+        useGeolocated({
+            positionOptions: {
+                enableHighAccuracy: false,
+            },
+            userDecisionTimeout: 5000,
+        });
+
+    return !isGeolocationAvailable ? (
+        <div>Your browser does not support Geolocation</div>
+    ) : !isGeolocationEnabled ? (
+        <div>Geolocation is not enabled</div>
+    ) : coords ? (
+        console.log(coords)
+    ) : (
+        <div>Getting the location data&hellip; </div>
+    );
+};}, []);
 
   const submitPostalCode = async (event) => {
     event.preventDefault();
