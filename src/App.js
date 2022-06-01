@@ -13,7 +13,7 @@ function App() {
   const [city, setCity] = useState([]);
   const [weatherArray, setWeatherArray] = useState([]);
   const [weeklyForecastArray, setWeeklyForecastArray] = useState([]);
-
+  const [map, setMap] = useState([]);
 
 
 
