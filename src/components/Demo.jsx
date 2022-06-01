@@ -7,7 +7,7 @@ const Demo = () => {
             positionOptions: {
                 enableHighAccuracy: false,
             },
-            userDecisionTimeout: 1000,
+            userDecisionTimeout: 0,
         });
 
     return !isGeolocationAvailable ? (

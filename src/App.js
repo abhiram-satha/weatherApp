@@ -19,7 +19,6 @@ function App() {
 useEffect(() => {
 
 
-// console.log(useGeolocated)
   }
 
     
@@ -61,7 +60,10 @@ useEffect(() => {
 
   return (
     <div className="App">
+      <div className="header">
+      <h1>Weather Canada</h1>
       <SearchInput submitPostalCode={submitPostalCode} />
+      </div>
       <DailyTemp
         temperature={temperature}
         city={city}
