@@ -15,6 +15,15 @@ function App() {
   const [weeklyForecastArray, setWeeklyForecastArray] = useState([]);
   const [map, setMap] = useState([]);
 
+  const containerStyle = {
+    width: '400px',
+    height: '400px'
+  };
+
+  let center = {
+    lat: 0,
+    lng: 0
+  }
 
 
 useEffect(() => {
@@ -37,6 +46,11 @@ useEffect(() => {
 
       const { name, lat, lon } = newGeoCode.data;
 
+      center = {
+        lat,
+        lng: lon
+      }
+
       const weatherAtCoordinates = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER}`
       );
@@ -58,6 +72,8 @@ useEffect(() => {
   const kelvinToCelsius = (kelvin) => {
     return (kelvin - 273.15).toFixed(2);
   };
+
+  
 
   return (
     <div className="App">
