@@ -14,17 +14,7 @@ function App() {
   const [city, setCity] = useState([]);
   const [weatherArray, setWeatherArray] = useState([]);
   const [weeklyForecastArray, setWeeklyForecastArray] = useState([]);
-  const [map, setMap] = useState([]);
 
-  const containerStyle = {
-    width: '400px',
-    height: '400px'
-  };
-
-  let center = {
-    lat: 0,
-    lng: 0
-  }
 
 
 useEffect(() => {
@@ -46,11 +36,6 @@ useEffect(() => {
       );
 
       const { name, lat, lon } = newGeoCode.data;
-
-      center = {
-        lat,
-        lng: lon
-      }
 
       const weatherAtCoordinates = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER}`
@@ -80,6 +65,13 @@ useEffect(() => {
     <div className="App">
       <div className="header">
       <h1>Weather Canada</h1>
+
+      <span>°C</span>
+      <label class="switch">
+  <input type="checkbox"/>
+  <span class="slider round"></span>
+</label>
+<span>F</span>
       <SearchInput submitPostalCode={submitPostalCode} />
       </div>
       <DailyTemp
