@@ -5,6 +5,7 @@ import SearchInput from "./components/SearchInput";
 import { useEffect, useState } from "react";
 import { useGeolocated } from "react-geolocated";
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 import axios from "axios";
 import Weekly from "./components/Weekly";
 
