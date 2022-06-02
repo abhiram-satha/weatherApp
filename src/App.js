@@ -12,7 +12,7 @@ function App() {
   const [city, setCity] = useState([]);
   const [weatherArray, setWeatherArray] = useState([]);
   const [weeklyForecastArray, setWeeklyForecastArray] = useState([]);
-
+  const [standardTemp, setStandardTemp] = useState(true)
 
 
 useEffect(() => {
@@ -57,21 +57,28 @@ useEffect(() => {
     return (kelvin - 273.15).toFixed(2);
   };
 
+  const kelvinToFahrenheit = (kelvin) => {
+    return (kelvin * 1.8) - 459.67
+  }
+
   
 
   return (
     <div className="App">
-      <Header submitPostalCode={submitPostalCode}/>
+      <Header submitPostalCode={submitPostalCode}
+      setStandardTemp={setStandardTemp}/>
 
       <DailyTemp
         temperature={temperature}
         city={city}
         weatherArray={weatherArray}
         kelvinToCelsius={kelvinToCelsius}
+        kelvinToFahrenheit={kelvinToFahrenheit}
       />
       <Weekly
         weeklyForecastArray={weeklyForecastArray}
         kelvinToCelsius={kelvinToCelsius}
+        kelvinToFahrenheit={kelvinToFahrenheit}
       />
     </div>
   );
