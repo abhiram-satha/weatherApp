@@ -1,11 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import DailyTemp from "./components/DailyTemp";
-import SearchInput from "./components/SearchInput";
 import { useEffect, useState } from "react";
-import { useGeolocated } from "react-geolocated";
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import Header from "./components/Header";
+import SearchInput from "./components/SearchInput";
 import axios from "axios";
 import Weekly from "./components/Weekly";
 
@@ -63,17 +61,8 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <div className="header">
-      <h1>Weather Canada</h1>
+      <Header submitPostalCode={submitPostalCode}/>
 
-      <span>°C</span>
-      <label class="switch">
-  <input type="checkbox"/>
-  <span class="slider round"></span>
-</label>
-<span>F</span>
-      <SearchInput submitPostalCode={submitPostalCode} />
-      </div>
       <DailyTemp
         temperature={temperature}
         city={city}
