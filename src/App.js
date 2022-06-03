@@ -83,6 +83,7 @@ useEffect(() => {
         temperature={temperature}
         city={city}
         weatherArray={weatherArray}
+        standardTemp={standardTemp}
         kelvinToCelsius={kelvinToCelsius}
         kelvinToFahrenheit={kelvinToFahrenheit}
         
