@@ -61,12 +61,23 @@ useEffect(() => {
     return (kelvin * 1.8) - 459.67
   }
 
+  const toggleWeather = (event) => {
+    // event.preventDefault();
+
+    if (standardTemp) {
+      return setStandardTemp(false);
+    } else {
+      return setStandardTemp(true)
+    }
+  }
+
   
 
   return (
     <div className="App">
       <Header submitPostalCode={submitPostalCode}
-      setStandardTemp={setStandardTemp}/>
+      standardTemp={standardTemp}
+      toggleWeather={toggleWeather}/>
 
       <DailyTemp
         temperature={temperature}
@@ -74,6 +85,7 @@ useEffect(() => {
         weatherArray={weatherArray}
         kelvinToCelsius={kelvinToCelsius}
         kelvinToFahrenheit={kelvinToFahrenheit}
+        
       />
       <Weekly
         weeklyForecastArray={weeklyForecastArray}
