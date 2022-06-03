@@ -109,3 +109,9 @@ input:checked + .slider:before {
   -webkit-transition: .4s;
   transition: .4s;
 }
+
+div.toggleWeatherLabel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

@@ -5,6 +5,7 @@ export default function Header({ submitPostalCode, setStandardTemp, toggleWeathe
     <div className="header">
       <h1>Weather Canada</h1>
 
+    <div className="toggleWeatherLabel">
       <span>°C</span>
       <form onChange={(event)=>toggleWeather(event)}>
         <label class="switch">
@@ -13,6 +14,7 @@ export default function Header({ submitPostalCode, setStandardTemp, toggleWeathe
         </label>
       </form>
       <span>°F</span>
+      </div>
       <SearchInput submitPostalCode={submitPostalCode} />
     </div>
   );
