@@ -58,7 +58,7 @@ useEffect(() => {
   };
 
   const kelvinToFahrenheit = (kelvin) => {
-    return (kelvin * 1.8) - 459.67
+    return ((kelvin * 1.8) - 459.67).toFixed(2)
   }
 
   const toggleWeather = (event) => {
@@ -92,6 +92,7 @@ useEffect(() => {
         weeklyForecastArray={weeklyForecastArray}
         kelvinToCelsius={kelvinToCelsius}
         kelvinToFahrenheit={kelvinToFahrenheit}
+        standardTemp={standardTemp}
       />
     </div>
   );

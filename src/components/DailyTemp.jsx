@@ -25,10 +25,10 @@ export default function DailyTemp({city, temperature, weatherArray, kelvinToCels
       : 
       <div className={main}>
       <h1>{city}</h1>
-      <p>Current Temp: {kelvinToFahrenheit(temp)}F</p>
-      <p>Feels Like: {kelvinToFahrenheit(feels_like)}F</p>
-      <p>Daily High: {kelvinToFahrenheit(temp_max)}F</p>
-      <p>Daily Low: {kelvinToFahrenheit(temp_min)}F </p>
+      <p>Current Temp: {kelvinToFahrenheit(temp)}°F</p>
+      <p>Feels Like: {kelvinToFahrenheit(feels_like)}°F</p>
+      <p>Daily High: {kelvinToFahrenheit(temp_max)}°F</p>
+      <p>Daily Low: {kelvinToFahrenheit(temp_min)}°F </p>
       </div>
 
 

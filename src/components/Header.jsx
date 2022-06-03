@@ -12,7 +12,7 @@ export default function Header({ submitPostalCode, setStandardTemp, toggleWeathe
           <span class="slider round"></span>
         </label>
       </form>
-      <span>F</span>
+      <span>°F</span>
       <SearchInput submitPostalCode={submitPostalCode} />
     </div>
   );
