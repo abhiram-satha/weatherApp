@@ -17,21 +17,12 @@ export default function Forecast({
         </h5>
         {standardTemp ? (
           <>
-            <p>{kelvinToCelsius(main.temp)}°C</p>
-            <h6>
-              Feels Like
-              <br />
-              {kelvinToCelsius(main.temp)}°C
-            </h6>{" "}
+            <h4>{kelvinToCelsius(main.temp)}°C</h4>
           </>
         ) : (
           <>
-            <p>{kelvinToFahrenheit(main.temp)}°F</p>
-            <h6>
-              Feels Like
-              <br />
-              {kelvinToFahrenheit(main.temp)}°F
-            </h6>
+            <h4>{kelvinToFahrenheit(main.temp)}°F</h4>
+           
           </>
         )}
 
