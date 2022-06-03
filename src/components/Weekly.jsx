@@ -23,7 +23,8 @@ forecastSplit();
   return (
     <>
     
-    <h2>5 Day Forecast</h2>
+    {weeklyForecastArray.length > 0 && <h2>5 Day Forecast</h2>}
+    
     <div className="weekly-grid">
 
       {forecastSplit()}
