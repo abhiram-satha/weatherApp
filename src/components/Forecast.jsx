@@ -9,9 +9,12 @@ export default function Forecast({
   const { main, weather, dt_txt } = forecastObject;
 
   const monthCalculator = () => {
-    if(dt_txt[6] === "1") {
-      console.log(true)
+    if(dt_txt[5] === "1") {
+      if(dt_txt[6] === "0") {
+        return "Oct"
+      }
     }
+    
   }
 
   monthCalculator()

@@ -2,16 +2,19 @@ div.Clouds {
   background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/10/Cloud-Wallpapers-HD-Desktop.jpg");
   background-size: 100%;
   background-size: cover;
+  border-radius: 5%;
 }
 
 div.Clear {
   background-image: url("https://wallpapercave.com/wp/wp7399683.jpg");
   background-size: 100%;
   background-size: cover;
+  border-radius: 5%;
 }
 
 div.Rain {
   background-image: url("https://getwallpapers.com/wallpaper/full/6/8/2/909952-cool-rain-drops-wallpaper-3840x2160.jpg");
   background-size: 100%;
   background-size: cover;
+  border-radius: 5%;
 }
