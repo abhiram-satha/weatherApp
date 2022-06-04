@@ -1,11 +1,14 @@
 div.Clouds {
-  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/10/Cloud-Wallpapers-HD-Desktop.jpg")
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/10/Cloud-Wallpapers-HD-Desktop.jpg");
+  background-size: 100%
 }
 
 div.Clear {
   background-image: url("https://wallpapercave.com/wp/wp7399683.jpg");
+  background-size: 100%
 }
 
 div.Rain {
-  background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/D8qa-2E/blurry-city-skyline-window-view-sad-bad-weather-rain-drops-background_rzeld4gxs_thumbnail-1080_01.png");
+  background-image: url("https://getwallpapers.com/wallpaper/full/6/8/2/909952-cool-rain-drops-wallpaper-3840x2160.jpg");
+  background-size: 100%
 }
