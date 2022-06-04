@@ -9,7 +9,7 @@ div.weekly-grid {
 div.forecast-flex {
   display: flex;
   flex-direction: column;
-  border-radius: 5%;
   border: 1px gray solid;
   padding: 0 1.5em;
+  background-color: rgb(200, 200, 200, .2);
 }

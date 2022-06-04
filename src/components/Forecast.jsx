@@ -46,10 +46,9 @@ export default function Forecast({
 
   monthCalculator()
 
-  console.log(dt_txt)
   return (
     <div className={weather[0].main}>
-      <div className="forecast-flex">
+      <div className="forecast-flex weekly">
         <h5>
           {monthCalculator()}
            {dt_txt[8]}
@@ -65,6 +64,7 @@ export default function Forecast({
            
           </>
         )}
+        Expect {weather[0].description}
 
         {/* <Demo /> */}
       </div>
