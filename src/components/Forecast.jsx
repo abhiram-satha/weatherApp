@@ -8,6 +8,15 @@ export default function Forecast({
 }) {
   const { main, weather, dt_txt } = forecastObject;
 
+  const monthCalculator = () => {
+    if(dt_txt[6] === "1") {
+      console.log(true)
+    }
+  }
+
+  monthCalculator()
+
+  console.log(dt_txt)
   return (
     <div className={weather[0].main}>
       <div className="forecast-flex">
@@ -26,7 +35,7 @@ export default function Forecast({
           </>
         )}
 
-        <Demo />
+        {/* <Demo /> */}
       </div>
     </div>
   );
