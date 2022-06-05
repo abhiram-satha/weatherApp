@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: #63abe8;
+  background-size: cover;
   margin: 0 0.01rem;
   /* font-family: 'Bungee', cursive;
 font-family: 'Lato', sans-serif;

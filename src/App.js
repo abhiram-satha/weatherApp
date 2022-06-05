@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import SearchInput from "./components/SearchInput";
 import axios from "axios";
 import Weekly from "./components/Weekly";
+import Demo from "./components/Demo";
 
 function App() {
   const [temperature, setTemperature] = useState([]);
@@ -79,6 +80,7 @@ useEffect(() => {
       standardTemp={standardTemp}
       toggleWeather={toggleWeather}/>
 
+      <Demo />
       <DailyTemp
         temperature={temperature}
         city={city}
